@@ -251,7 +251,8 @@ function RechartsTimeSeries(props: RechartsTimeSeriesProps) {
 
     const durationInDays =
       // eslint-disable-next-line no-magic-numbers
-      props.timeSeries.length > 0 ? timeDifference / 60 / 60 / 24 : 0
+      props.timeSeries.length > 0 ? timeDifference / (1000 * 60 * 60 * 24) : 0
+
     return durationInDays
   }
 
